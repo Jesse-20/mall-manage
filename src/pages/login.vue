@@ -1,6 +1,6 @@
 <template>
-  <div class="login-full-container">
-    <div class="messge-input"></div>
+  <div class="container">
+    <div class="message-container">login</div>
   </div>
 </template>
 
@@ -14,28 +14,23 @@ export default {
     };
   },
   watch: {},
-  mounted() {
-    this.getWindowSize();
-  },
-  methods: {
-    getWindowSize() {
-      const height =
-        window.innerHeight ||
-        document.body.clientHeight ||
-        document.documentElement.innerHeight;
-      const width =
-        window.innerWidth ||
-        document.body.clientWidth ||
-        document.documentElement.innerWidth;
-      console.log("Height" + height + "Width" + width);
-    },
-  },
+  mounted() {},
+  methods: {},
 };
 </script>
-<style>
-.login-full-container {
-  text-align: center;
-  background: url("/images/login.png") no-repeat;
-  height: 200px;
+<style lang="scss" scoped>
+@import "./../assets/scss/config.scss";
+.container {
+  height: 1000px;
+  display: flex;
+  justify-content: center; /*弹性盒子里边横轴对齐方式*/
+  align-items: center;
+  .message-container {
+    font-size: $fontG;
+    color: $Wcolor;
+    background-color: $Bcolor;
+    width: 200px;
+    height: 200px;
+  }
 }
 </style>

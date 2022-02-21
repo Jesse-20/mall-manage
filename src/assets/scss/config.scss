@@ -1,0 +1,26 @@
+/*
+  样式规范表
+*/
+$min-width:1226px; //规定浏览器容器安全区域宽度
+
+// 常规字体大小设置
+$fontA: 80px; //产品站大标题
+$fontB: 38px; //产品站标题
+$fontC: 28px; //导航标题
+$fontD: 26px; //产品站副标题
+$fontE: 24px;
+$fontF: 22px;
+$fontG: 20px; //用在较为重要的文字、操作按钮
+$fontH: 18px; //用于大多数文字
+$fontI: 16px; //用于辅助性文字
+$fontJ: 14px; //用于一般文字
+$fontK: 12px; //系统默认大小
+$fontM: 30px; //login标签适配用字体大小
+// 常规配色设置
+$Wcolor: #ffffff !default; //白色
+$Gcolor: rgb(153, 153, 153) !default; //灰色
+$Bcolor: #916c60 !default; //浅棕色
+$colorA: #ea5148 !default; //主题红色
+$colorB: #999999 !default; //字体默认灰色
+$colorC: #f1f3f5 !default; //大模板背景色
+$colorD: #333333 !default; //主页模板的背景黑色
