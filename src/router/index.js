@@ -25,10 +25,11 @@ export default new VueRouter({
         {
             path: '/manage',
             name: 'manage',
+            redirect:'/',
             component: Manage,
             children: [
                 {
-                    path: '',
+                    path: '/',
                     name: 'home',
                     component: Home, 
                     meta:[],
