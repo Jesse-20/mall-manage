@@ -1,6 +1,8 @@
 <template>
-  <div class="container">
-    <div class="message-container">login</div>
+  <div class="login_container fillcontain">
+    <section class="sec">
+      <button @click="login">click me to login</button>
+    </section>
   </div>
 </template>
 
@@ -8,29 +10,27 @@
 export default {
   name: "login",
   data() {
-    return {
-      wHeight: "",
-      wWidth: "",
-    };
+    return {};
   },
   watch: {},
   mounted() {},
-  methods: {},
+  methods: {
+    login() {
+      this.$router.push("/manage");
+    },
+  },
 };
 </script>
 <style lang="scss" scoped>
 @import "./../assets/scss/config.scss";
-.container {
-  height: 1000px;
-  display: flex;
-  justify-content: center; /*弹性盒子里边横轴对齐方式*/
-  align-items: center;
-  .message-container {
-    font-size: $fontG;
-    color: $Wcolor;
-    background-color: $Bcolor;
-    width: 200px;
+.login_container {
+  background-color: $colorD;
+  .sec {
+    text-align: center;
     height: 200px;
+    button {
+      height: 100px;
+    }
   }
 }
 </style>
