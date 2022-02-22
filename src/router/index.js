@@ -32,7 +32,7 @@ export default new VueRouter({
                     path: '/',
                     name: 'home',
                     component: Home, 
-                    meta:[],
+                    meta:['首页'],
                 },
                 {
                     path: '/addGoods',
