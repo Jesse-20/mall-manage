@@ -9,6 +9,9 @@ Vue.use(VueAxios, axios)
 
 Vue.use(ElementUI)
 
+axios.defaults.baseURL = "https://www.fastmock.site/mock/ac80b8f210e6bd9c533e737446af8be5/api";
+axios.defaults.timeout = 8000;
+
 Vue.config.productionTip = false
 
 new Vue({
