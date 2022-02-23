@@ -1,9 +1,9 @@
 <template>
-  <div></div>
+  <div>adminSet</div>
 </template>
 <script>
 export default {
-  name: "",
+  name: "adminSet",
 };
 </script>
 <style scoped>
