@@ -1,10 +1,10 @@
 <template>
-  <div>userList</div>
+  <div class="userList-container"></div>
 </template>
 <script>
 export default {
   name: "userList",
 };
 </script>
-<style scoped>
+<style lang="scss" scoped>
 </style>
