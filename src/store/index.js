@@ -6,7 +6,8 @@ import mutations from './mutations'
 Vue.use(Vuex);
 
 const state = {
-    routepath:[],
+    routepath: [],
+    username:'',
 }
 
 export default new Vuex.Store({

@@ -7,6 +7,7 @@
 </template>
 
 <script>
+import { mapActions } from "vuex";
 export default {
   name: "login",
   data() {
@@ -15,7 +16,11 @@ export default {
   watch: {},
   mounted() {},
   methods: {
+    ...mapActions(["getUserName"]),
     login() {
+      this.axios.get("/getUser").then((res) => {
+        console.log(res.data);
+      });
       this.$router.push("/manage");
     },
   },

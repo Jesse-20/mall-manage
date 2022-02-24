@@ -22,10 +22,13 @@
     </div>
     <div class="pagination-conainer">
       <el-pagination
+        id="fenyeqi"
         background
-        layout="prev, pager, next"
-        :total="this.totalNum"
+        @size-change="handleSizeChange"
+        @current-change="handleCurrentChange"
+        layout="total,sizes,prev, pager, next,jumper"
         :page-size="10"
+        :total="count"
       >
       </el-pagination>
     </div>
@@ -37,17 +40,27 @@ export default {
   data() {
     return {
       tableData: [],
-      totalNum: 0,
+      pageSize: 10,
+      count: 0,
     };
   },
   created() {
-    this.getUserList();
+    this.initData();
   },
   methods: {
+    initData() {
+      this.getUserCount();
+      this.getUserList();
+    },
+    getUserCount() {
+      this.axios.get("/getUserList").then((res) => {
+        // this.count = res.data.totalNum;
+        this.count = res.data.length;
+      });
+    },
     getUserList() {
       this.axios.get("/getUserList").then((res) => {
-        this.tableData = res.data.data;
-        this.totalNum = res.totalNum;
+        this.tableData = res.data;
       });
     },
     // async getUserList(
@@ -59,7 +72,11 @@ export default {
     //   //return response;
     //   console.log(response);
     // },
+    handleSizeChange() {},
+    //这个带参数的接口目前还做不到
+    handleCurrentChange() {},
   },
+  watch: {},
 };
 </script>
 <style lang="scss">
