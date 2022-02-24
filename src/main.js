@@ -8,7 +8,7 @@ import App from './App.vue'
 //mock开关
 const mock = true;
 if (mock) {
-  require('./mock/login');
+  require('./mock/index');
 }
 
 //使用axios和vue-axios

@@ -18,7 +18,7 @@ export default {
   methods: {
     ...mapActions(["getUserName"]),
     login() {
-      this.axios.get("/getUserList").then((res) => {
+      this.axios.get("/getUser").then((res) => {
         console.log(res.data);
       });
       this.$router.push("/manage");

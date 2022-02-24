@@ -4,12 +4,16 @@ const Mock = require('mockjs');
 //获取mock.Random对象
 const Random = Mock.Random;
 
-const UserData = function () {
+const User = function () {
     let data = [];
-    for (let i = 0; i < 2; i++){
+    const totalNum = 1000;
+    data.push(totalNum)
+    for (let i = 1; i < totalNum; i++){
         let UserObject = {
+            index:Random.id(),
+            date: Random.date() + ' ' + Random.time(),
             name: Random.cname(),
-            data:Random.date()+' '+Random.time()
+            address:Random.city()
         }
         data.push(UserObject)
     }
@@ -19,6 +23,5 @@ const UserData = function () {
 }
 
 export default {
-    UserData
+    User
 }
-// Mock.mock('/api/getUserList','get',UserData)

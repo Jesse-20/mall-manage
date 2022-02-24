@@ -54,12 +54,13 @@ export default {
     },
     getUserCount() {
       this.axios.get("/getUserList").then((res) => {
-        this.count = res.data.totalNum;
+        // this.count = res.data.totalNum;
+        this.count = res.data.length;
       });
     },
     getUserList() {
       this.axios.get("/getUserList").then((res) => {
-        this.tableData = res.data.data;
+        this.tableData = res.data;
       });
     },
     // async getUserList(
