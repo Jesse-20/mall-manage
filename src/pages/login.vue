@@ -18,11 +18,10 @@ export default {
   methods: {
     ...mapActions(["getUserName"]),
     login() {
-      this.axios.get("/login").then((res) => {
-        const username = res.data.username;
-        this.getUserName(username);
-        this.$router.push("/manage");
+      this.axios.get("/getUserList").then((res) => {
+        console.log(res.data);
       });
+      this.$router.push("/manage");
     },
   },
 };
