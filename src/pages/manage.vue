@@ -51,8 +51,12 @@
       </el-col>
       <el-col :span="20" style="height: 100%; overflow: auto">
         <nav-header></nav-header>
-        <keep-alive> <router-view></router-view> </keep-alive
-      ></el-col>
+        <el-scrollbar style="height: 100%">
+          <keep-alive>
+            <router-view></router-view>
+          </keep-alive>
+        </el-scrollbar>
+      </el-col>
     </el-row>
   </div>
 </template>
@@ -83,5 +87,12 @@ export default {
 }
 .el-submenu__title {
   color: $colorB;
+}
+.el-scrollbar__bar.is-vertical {
+  width: 16px;
+  top: 2px;
+}
+.el-scrollbar__wrap {
+  overflow-x: hidden;
 }
 </style>

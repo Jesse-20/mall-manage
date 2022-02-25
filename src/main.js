@@ -17,7 +17,7 @@ Vue.use(VueAxios, axios)
 //使用elementUI
 Vue.use(ElementUI)
 
-//配置axios
+//配置axios 
 axios.defaults.baseURL = "/api";
 axios.defaults.timeout = 8000;
 //配置axios响应拦截器

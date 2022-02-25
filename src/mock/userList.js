@@ -7,9 +7,9 @@ const Random = Mock.Random;
 const User = function () {
     let data = [];
     const totalNum = 1000;
-    data.push(totalNum)
-    for (let i = 1; i < totalNum; i++){
+    for (let i = 0; i < totalNum; i++){
         let UserObject = {
+            Ordnum:i,
             index:Random.id(),
             date: Random.date() + ' ' + Random.time(),
             name: Random.cname(),
